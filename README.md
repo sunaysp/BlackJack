@@ -26,7 +26,7 @@ Assumptions
 2. The dealer will take hits until his or her cards total is 17 or more points than the player. 
 3. User's total chips is 100 initially. 
 4. All the win payments are in the ratio 1:1 and nothing is exchanged if match is tied. However, i have written code to 
-   replace for 2:1 for the BlackJack case in comments in .
+   replace for 2:1 for the BlackJack case in comments in checkBJWinStatus(User user) method in BlackJackGame.java file.
 5. Deck will have a pack of 52 cards and cards are randomly taken from this Deck. Once the deck is empty, all the cards 
    taken out from deck are put it back to it. However, we can initialize the deck with more than one pack of cards by 
    calling another constructor which is shown in comments section in BJ.java file. 
