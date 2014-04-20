@@ -8,7 +8,7 @@ import java.util.*;
 public class BlackJackGame {
 	
 	ArrayList<Card> dealercards=new ArrayList<Card>(); // This will hold dealer cards.
-	int dealvalue = 0; // This will have the deal value.
+	int dealvalue = 0; // This will have the deal value i.e. bet amount.
 	boolean isGameOver=false; // Flag used to see if the game has over and to start a new Game
 	
 	// Display method is used to display the Dealer's One card and the User's both cards. Player will see dealer's one card and his two cards. 
@@ -72,6 +72,10 @@ public class BlackJackGame {
 		else if(userstatus){ // Else check if user has blackjack
 			System.out.println("You have the BlackJack! You Won ");
 			user.totalchips+=2*this.dealvalue; // returns the money back to the user in the ratio 1:1. i.e. both user's money and dealer's money.
+			/*
+			 * Here we have assumed 1:1 for BlackJack also. If it is 2:1, then use below. 
+			 * user.totalchips+=2.5*this.dealvalue;
+			 */
 			this.isGameOver=true;
 			dislayResult(dealercards,user);
 		}
@@ -108,7 +112,7 @@ public class BlackJackGame {
 			try {
 				int input = reader.nextInt();
 				if(input==1){
-					System.out.println("You currently have " + user.totalchips+ " Enter the deal amount ");
+					System.out.println("You currently have " + user.totalchips+ " Enter the bet amount ");
 					while(true){
 						try {
 							Scanner reader1 = new Scanner(System.in);
